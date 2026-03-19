@@ -1,0 +1,51 @@
+.fadeIn {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slideUp {
+  animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.blob {
+  animation: blob 2s infinite;
+}
+
+@keyframes blob {
+  0%, 100% {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 30%;
+  }
+}
+
+/* Tailwind CSS imports */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* RTL support */
+[dir='rtl'] { direction: rtl; }
+[dir='rtl'] .fadeIn, [dir='rtl'] .slideUp, [dir='rtl'] .blob {
+  /* Add any RTL specific styles here */
+}
